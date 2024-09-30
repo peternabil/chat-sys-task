@@ -1,0 +1,29 @@
+#!/bin/bash -e
+
+# Enable jemalloc for reduced memory usage and latency if available
+if [ -z "${LD_PRELOAD+x}" ] && [ -f /usr/lib/*/libjemalloc.so.2 ]; then
+  export LD_PRELOAD="$(echo /usr/lib/*/libjemalloc.so.2)"
+fi
+
+# Wait for the database to be ready (ensure the database is up before running migrations)
+until ./bin/rails db:create; do
+  echo "Waiting for the database to be ready..."
+  sleep 2s
+done
+
+# Run database migrations
+if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
+  echo "Running database migrations..."
+  ./bin/rails db:migrate
+  echo "Reindexing Elasticsearch indices..."
+  ./bin/rails runner "Message.__elasticsearch__.create_index!(force: true); Message.import"
+fi
+
+# If running the Rails server, proceed to start the server
+if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
+  echo "Starting Rails server..."
+  exec "$@"
+else
+  # Run the command passed into the container (if not Rails server)
+  exec "$@"
+fi

@@ -1,0 +1,104 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rails_chat_system
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - "3306:3306"
+    volumes:
+      - my_data:/var/lib/mysql
+
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./tmp/redis_data:/var/lib/redis/data
+      
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.5
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - my_data:/var/lib/elasticsearch
+    healthcheck:
+      test: curl -s http://localhost:9200/_cluster/health | grep '"status":"green"'
+      interval: 10s
+      retries: 10
+
+  rails_app:
+    build:
+      context: ./rails_chat_system
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql2://root:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE}
+      REDIS_URL: ${REDIS_URL}
+      RABBITMQ_URL: ${RABBITMQ_URL}
+      ELASTICSEARCH_URL: ${ELASTICSEARCH_URL}
+    volumes:
+      - ./rails_chat_system:/rails_chat_system
+    ports:
+      - "3000:3000"
+    command: ["./bin/rails", "server", "-b", "0.0.0.0"]
+
+  go_app:
+    build:
+      context: ./go_chat_system
+    depends_on:
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      REDIS_CONN: redis:6379
+      RABBITMQ_CONN: ${RABBITMQ_URL}
+    ports:
+      - "8080:8080"
+    command: ["/app/main"]
+      
+  sidekiq:
+    image: instabug-task-rails_app
+    build:
+      context: ./rails_chat_system
+    command: bundle exec sidekiq
+    volumes:
+      - ./rails_chat_system:/rails_chat_system
+    depends_on:
+      - rails_app
+      - redis
+      - rabbitmq
+    environment:
+      REDIS_URL: ${REDIS_URL}
+      DATABASE_URL: mysql2://root:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE}
+      ELASTICSEARCH_URL: ${ELASTICSEARCH_URL}
+
+volumes:
+  my_data:

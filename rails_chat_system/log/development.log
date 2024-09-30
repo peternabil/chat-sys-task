@@ -1,0 +1,698 @@
+  [1m[35m (107.6ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (102.3ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (27.8ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (54.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (60.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (8.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (10.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-09-27 18:46:50.528728', '2024-09-27 18:46:50.528735')[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE `applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token` varchar(255) DEFAULT UUID() NOT NULL, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE `applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (72.5ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (62.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (13.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` bigint NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` bigint NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (135.4ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE `chat` ADD CONSTRAINT `fk_rails_1c1e0c8ac1`
+FOREIGN KEY (`chat_token`)
+  REFERENCES `application` (`token`)
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (34.7ms)[0m  [1m[35mDROP INDEX `index_applications_on_token` ON `applications`[0m
+  [1m[35m (46.8ms)[0m  [1m[35mDROP TABLE `applications`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (15.8ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20240927183636'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (65.2ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (41.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (35.2ms)[0m  [1m[35mDROP INDEX `index_applications_on_token` ON `applications`[0m
+  [1m[35m (55.4ms)[0m  [1m[35mDROP TABLE `applications`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (31.2ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20240927183636'[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (17.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (32.8ms)[0m  [1m[35mDROP INDEX `index_applications_on_token` ON `applications`[0m
+  [1m[35m (32.0ms)[0m  [1m[35mDROP TABLE `applications`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (13.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20240927183636'[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (91.8ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (55.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (12.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (35.3ms)[0m  [1m[35mDROP INDEX `index_applications_on_token` ON `applications`[0m
+  [1m[35m (88.3ms)[0m  [1m[35mDROP TABLE `applications`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (22.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20240927183636'[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (78.5ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (39.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (8.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (28.8ms)[0m  [1m[35mDROP INDEX `index_applications_on_token` ON `applications`[0m
+  [1m[35m (31.1ms)[0m  [1m[35mDROP TABLE `applications`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (7.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20240927183636'[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (40.7ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (57.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (46.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (10.9ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-09-27 19:19:16.364391', '2024-09-27 19:19:16.364399')[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (60.4ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (52.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (31.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (56.3ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mALTER TABLE `chats` ADD CONSTRAINT `fk_rails_e8bb972bed`
+FOREIGN KEY (`chat_token`)
+  REFERENCES `applications` (`token`)
+[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (22.4ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (63.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (42.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (8.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-09-27 19:19:57.802287', '2024-09-27 19:19:57.802292')[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (61.0ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (15.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (72.1ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE `chats` ADD CONSTRAINT `fk_rails_8e988ccd47`
+FOREIGN KEY (`token`)
+  REFERENCES `applications` (`id`)
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (51.6ms)[0m  [1m[35mDROP INDEX `index_applications_on_token` ON `applications`[0m
+  [1m[35m (45.3ms)[0m  [1m[35mDROP TABLE `applications`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (16.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20240927183636'[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (116.2ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (42.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (11.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (25.6ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (57.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (69.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (10.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-09-27 19:28:17.315789', '2024-09-27 19:28:17.315797')[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (56.9ms)[0m  [1m[35mCREATE TABLE `applications` (`token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (45.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (12.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (25.1ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (44.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (8.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-09-27 19:29:50.224271', '2024-09-27 19:29:50.224278')[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE `applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE `applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token` varchar(255) NOT NULL PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (68.5ms)[0m  [1m[35mCREATE TABLE `applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token` varchar(255) NOT NULL, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (41.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (13.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` varchar(255) NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (81.1ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` bigint NOT NULL, `chat_num` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (7.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927190137')[0m
+Migrating to CreateMessages (20240927190242)
+  [1m[35m (79.0ms)[0m  [1m[35mCREATE TABLE `messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_id` bigint NOT NULL, `message_num` int, `body` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_messages_on_chat_id` (`chat_id`), CONSTRAINT `fk_rails_0f670de7ba`
+FOREIGN KEY (`chat_id`)
+  REFERENCES `chats` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (11.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927190242')[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCREATE DATABASE `rails_chat_system_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (45.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Create (9.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-09-27 19:33:22.787656', '2024-09-27 19:33:22.787663')[0m
+Migrating to CreateApplications (20240927183636)
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE TABLE `applications` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token` varchar(255) NOT NULL, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_applications_on_token` ON `applications` (`token`)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (24.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927183636')[0m
+Migrating to CreateChats (20240927190137)
+  [1m[35m (74.7ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `application_id` bigint NOT NULL, `chat_num` int NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_chats_on_application_id` (`application_id`), CONSTRAINT `fk_rails_3b5054ba3a`
+FOREIGN KEY (`application_id`)
+  REFERENCES `applications` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (22.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927190137')[0m
+Migrating to CreateMessages (20240927190242)
+  [1m[35m (88.0ms)[0m  [1m[35mCREATE TABLE `messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `chat_id` bigint NOT NULL, `message_num` int NOT NULL, `body` varchar(255) NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_messages_on_chat_id` (`chat_id`), CONSTRAINT `fk_rails_0f670de7ba`
+FOREIGN KEY (`chat_id`)
+  REFERENCES `chats` (`id`)
+)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (13.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240927190242')[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/applications" for 127.0.0.1 at 2024-09-27 22:39:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (5.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ApplicationsController#index as */*
+  [1m[36mApplication Load (16.9ms)[0m  [1m[34mSELECT `applications`.* FROM `applications`[0m
+  ↳ app/controllers/applications_controller.rb:4:in `index'
+Completed 200 OK in 93ms (Views: 3.8ms | ActiveRecord: 18.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:46:11 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 54.2ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `application_params' for an instance of ApplicationsController):
+  
+app/controllers/applications_controller.rb:8:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:46:33 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 6.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `applications_params' for an instance of ApplicationsController):
+  
+app/controllers/applications_controller.rb:8:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:47:38 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 20.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/applications_controller.rb:8:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:48:25 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 12.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/applications_controller.rb:9:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:49:30 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"application"=>{"name"=>"My app 1"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: name):
+  
+app/controllers/applications_controller.rb:20:in `application_params'
+app/controllers/applications_controller.rb:8:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:49:42 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/applications_controller.rb:9:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:53:12 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 16.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/applications_controller.rb:8:in `create'
+Started POST "/applications" for 127.0.0.1 at 2024-09-27 22:58:16 +0300
+Processing by ApplicationsController#create as */*
+  Parameters: {"name"=>"My app 1", "application"=>{"name"=>"My app 1"}}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/applications_controller.rb:9:in `create'
+  [1m[36mApplication Create (9.5ms)[0m  [1m[32mINSERT INTO `applications` (`token`, `name`, `created_at`, `updated_at`) VALUES ('95e6e5d7-2bac-4c6b-b88e-1e02365e8749', 'My app 1', '2024-09-27 19:58:16.748413', '2024-09-27 19:58:16.748413')[0m
+  ↳ app/controllers/applications_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/applications_controller.rb:9:in `create'
+Completed 201 Created in 75ms (Views: 1.2ms | ActiveRecord: 41.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/messages/search?query=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:21:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (5.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/messages/search"):
+  
+Started GET "/messages?query=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:22:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/messages"):
+  
+Started GET "/messages?query=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:22:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MessagesController#index as */*
+  Parameters: {"query"=>"your", "chat_id"=>"1"}
+Completed 422 Unprocessable Content in 31ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/messages?q=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:23:15 +0300
+Processing by MessagesController#index as */*
+  Parameters: {"q"=>"your", "chat_id"=>"1"}
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/models/concerns/searchable.rb:13:in `search'
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?q=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:24:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MessagesController#index as */*
+  Parameters: {"q"=>"your", "chat_id"=>"1"}
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/models/concerns/searchable.rb:13:in `search'
+app/controllers/messages_controller.rb:4:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/messages?q=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:26:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MessagesController#index as */*
+  Parameters: {"q"=>"your", "chat_id"=>"1"}
+Completed 500 Internal Server Error in 786ms (ActiveRecord: 36.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Elastic::Transport::Transport::Errors::BadRequest ([400] {"error":{"root_cause":[{"type":"parsing_exception","reason":"Unknown key for a START_OBJECT in [bool].","line":1,"col":9}],"type":"parsing_exception","reason":"Unknown key for a START_OBJECT in [bool].","line":1,"col":9},"status":400}):
+  
+app/models/concerns/searchable.rb:29:in `search'
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?q=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:29:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MessagesController#index as */*
+  Parameters: {"q"=>"your", "chat_id"=>"1"}
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 32.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+Elastic::Transport::Transport::Errors::NotFound ([404] {"error":{"root_cause":[{"type":"index_not_found_exception","reason":"no such index [messages]","resource.type":"index_or_alias","resource.id":"messages","index_uuid":"_na_","index":"messages"}],"type":"index_not_found_exception","reason":"no such index [messages]","resource.type":"index_or_alias","resource.id":"messages","index_uuid":"_na_","index":"messages"},"status":404}):
+  
+app/models/concerns/searchable.rb:34:in `search'
+app/controllers/messages_controller.rb:4:in `index'
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` ORDER BY `messages`.`id` ASC LIMIT 1000[0m
+Started GET "/messages?q=your&chat_id=1" for 127.0.0.1 at 2024-09-28 01:31:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MessagesController#index as */*
+  Parameters: {"q"=>"your", "chat_id"=>"1"}
+  [1m[36mMessage Load (3.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`id` IN (3, 4, 1, 2)[0m
+  ↳ app/models/concerns/searchable.rb:34:in `search'
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 41.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `records' for an instance of Array):
+  
+app/controllers/messages_controller.rb:4:in `index'
+Started GET "/messages?q=your&chat_id=1" for 127.0.0.1 at 2024-09-28 02:11:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MessagesController#index as */*
+  Parameters: {"q"=>"your", "chat_id"=>"1"}
+  [1m[36mMessage Load (7.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`id` IN (3, 4, 1, 2)[0m
+  ↳ app/controllers/messages_controller.rb:5:in `index'
+Completed 200 OK in 394ms (Views: 290.3ms | ActiveRecord: 62.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('8585698352105982135', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+Migrating to AddCountersToApplicationsAndChats (20240928110402)
+  [1m[35m (190.7ms)[0m  [1m[35mALTER TABLE `applications` ADD `chats_count` int DEFAULT 0 NOT NULL[0m
+  [1m[35m (45.7ms)[0m  [1m[35mALTER TABLE `chats` ADD `messages_count` int DEFAULT 0 NOT NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Create (12.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240928110402')[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('8585698352105982135')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mApplication Load (102.7ms)[0m  [1m[34mSELECT `applications`.* FROM `applications` /* loading for pp */ LIMIT 11[0m
+  [1m[36mApplication Load (103.3ms)[0m  [1m[34mSELECT `applications`.* FROM `applications` /* loading for pp */ LIMIT 11[0m
+  [1m[36mApplication Load (103.5ms)[0m  [1m[34mSELECT `applications`.* FROM `applications` /* loading for pp */ LIMIT 11[0m
+  [1m[36mApplication Load (103.6ms)[0m  [1m[34mSELECT `applications`.* FROM `applications` /* loading for pp */ LIMIT 11[0m
+  [1m[36mApplication Load (110.3ms)[0m  [1m[34mSELECT `applications`.* FROM `applications` /* loading for pp */ LIMIT 11[0m
+  [1m[36mApplication Load (103.5ms)[0m  [1m[34mSELECT `applications`.* FROM `applications` /* loading for pp */ LIMIT 11[0m
+Started GET "/applications" for ::1 at 2024-09-29 04:23:50 +0300
+  
+ActiveRecord::ConnectionNotEstablished (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)):
+
+Causes:
+Mysql2::Error::ConnectionError (Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2))
+  
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:35:in `rescue in new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:24:in `new_client'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:145:in `connect'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:154:in `block in reconnect'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql2_adapter.rb:151:in `reconnect'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:662:in `block in reconnect!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:661:in `reconnect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:763:in `block in verify!'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:754:in `verify!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:771:in `connect!'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:977:in `block in with_raw_connection'
+activesupport (7.2.1) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:976:in `with_raw_connection'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:693:in `quote_string'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/quoting.rb:76:in `quote'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:255:in `quoted_scope'
+activerecord (7.2.1) lib/active_record/connection_adapters/mysql/schema_statements.rb:237:in `data_source_sql'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:60:in `table_exists?'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:54:in `block in create_table'
+activerecord (7.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:395:in `with_connection'
+activerecord (7.2.1) lib/active_record/schema_migration.rb:53:in `create_table'
+activerecord (7.2.1) lib/active_record/migration.rb:1434:in `initialize'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `new'
+activerecord (7.2.1) lib/active_record/migration.rb:1282:in `open'
+activerecord (7.2.1) lib/active_record/migration.rb:776:in `block (2 levels) in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration/pending_migration_connection.rb:8:in `with_temporary_pool'
+activerecord (7.2.1) lib/active_record/migration.rb:775:in `block in pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `each'
+activerecord (7.2.1) lib/active_record/migration.rb:774:in `pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:753:in `check_pending_migrations'
+activerecord (7.2.1) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.1) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.1) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
